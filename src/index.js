@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Profile from './profile/Profile';
+import image from './photo.jpg'
 import * as serviceWorker from './serviceWorker';
-
+function handleName(name) {
+  alert("This is the profile of " + name);
+}
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Profile fullname="Tom Cruise" profession="Actor" handleName={handleName}><img src={image}></img></Profile>
   </React.StrictMode>,
   document.getElementById('root')
 );
